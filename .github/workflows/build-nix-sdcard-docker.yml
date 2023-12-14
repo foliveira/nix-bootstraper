@@ -33,7 +33,7 @@ jobs:
           -I nixos-config=./builders/${{ github.event.inputs.target }}/default.nix \
           --argstr system aarch64-linux \
           --option sandbox false
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: nixos.img
         path: ./result/sd-image/*.img*  

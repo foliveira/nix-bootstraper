@@ -24,7 +24,7 @@ jobs:
           -A config.system.build.isoImage \
           -I nixos-config=./builders/${{ github.event.inputs.target }}/default.nix \
           --option sandbox false
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: nixos.iso
         path: ./result/iso/*.iso*
